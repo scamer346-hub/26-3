@@ -1,0 +1,7 @@
+{
+  "name": "Bảng Tuần Hoàn Hóa Học Thông Minh (ver2.0)",
+  "description": "Một bảng tuần hoàn các nguyên tố hóa học hiện đại với tính năng phát âm tên nguyên tố bằng AI và thông tin chi tiết.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

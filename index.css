@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+body {
+    font-family: 'Plus Jakarta Sans', 'sans-serif';
+    background-color: #0f172a;
+    color: #f8fafc;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* NEW Colorful Animated Background */
+.colorful-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -2;
+    background: #0f172a;
+}
+.colorful-bg div {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    transition: background-color 0.8s ease-in-out;
+}
+.blob1 {
+    width: 400px;
+    height: 400px;
+    top: -150px;
+    left: -150px;
+    animation: move-blob1 25s infinite alternate;
+}
+.blob2 {
+    width: 500px;
+    height: 500px;
+    bottom: -200px;
+    right: -200px;
+    animation: move-blob2 30s infinite alternate;
+}
+.blob3 {
+    width: 350px;
+    height: 350px;
+    bottom: 50px;
+    left: 100px;
+    animation: move-blob3 20s infinite alternate;
+}
+
+@keyframes move-blob1 {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.2) translate(100px, 80px); }
+}
+@keyframes move-blob2 {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.3) translate(-150px, -50px); }
+}
+@keyframes move-blob3 {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.1) translate(50px, -100px); }
+}
+
+/* Revamped Scrollbar Style - More Visible */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px; /* Made slightly thicker */
+    height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(30, 41, 59, 0.5); /* slate-800 with opacity for better contrast */
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #22d3ee, #8b5cf6); /* Cyan-400 to Violet-500 */
+    border-radius: 10px;
+    transition: all 0.15s ease-in-out;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #67e8f9, #a78bfa);
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.5); 
+}
